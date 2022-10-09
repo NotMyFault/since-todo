@@ -103,10 +103,10 @@ def display_results(commits_and_tags):
     print("List of commits introducing new API and the first release they went in:")
     releases = {release for release in commits_and_tags.values()}
     for release in sorted(releases):
-        print(f"* https://github.com/jenkinsci/jenkins/releases/tag/{release}")
+        print(f"* https://github.com/NotMyFault/since-todo/releases/tag/{release}")
         for commit, first_release in commits_and_tags.items():
             if release == first_release:
-                print(f"  - https://github.com/jenkinsci/jenkins/commit/{commit}")
+                print(f"  - https://github.com/NotMyFault/since-todo/commit/{commit}")
 
 
 def main():
