@@ -35,7 +35,7 @@ THE SOFTWARE.
     </st:attribute>
     Creates a search input
 
-    @since TODO
+    @since 2.373
   </st:documentation>
 
   <div class="jenkins-search ${attrs.clazz}">
