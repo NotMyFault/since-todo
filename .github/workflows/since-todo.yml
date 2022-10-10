@@ -16,11 +16,12 @@ jobs:
       run: |
         body=$(./update-since-todo.py)
         body="${body//'%'/'%25'}"
-        body="${body//$'\n'/'%0A'}"
-        body="${body//$'\r'/'%0D'}" 
+        body="${body//$'\n'/' '}"
+        body="${body//$'\r'/' '}"
+        body="${body//$'\\'/'%5C'}"
         echo ::set-output name=PROGRESS::$body
       id: run_script
-      shell: python
+      shell: bash
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
       with:
